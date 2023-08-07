@@ -11,20 +11,18 @@ export default function Head() {
     };
   return (
     <header>
-      <div className='container'>
     <ul className='options'>     
-      <ol className='listaHeader'><p>options</p></ol>
-      <ol className='listaHeader'><p>Home</p></ol>
-      <ol className='listaHeader' onClick={() => setMostrarOption(true)}><p>categorias</p></ol>
+      <li className='listaHeader'><p>options</p></li>
+      <li className='listaHeader'><p>Home</p></li>
+      <li className='listaHeader' onClick={() => setMostrarOption(true)}><p>categorias</p></li>
       {mostrarOption1 && <Option1 fecharOption={fecharOption} />}
-      <ol className='listaHeader'><p>fórum</p></ol>
+      <li className='listaHeader'><p>fórum</p></li>
     </ul>
     <div className='logo'></div>
     <span className='search'>
       <input type="text" className='pesquisa' placeholder='search' />
       <button className='bt'></button>
     </span>
-    </div>
     </header> 
   );
 }

@@ -1,4 +1,4 @@
-@media screen and (min-width:1024px){
+
 .boxOpção1{
     position: fixed;
     top: 0;
@@ -88,5 +88,4 @@
 @keyframes imagewindF {
     0%{opacity: 1;}
     100%{opacity: 0;}
-}
 }
