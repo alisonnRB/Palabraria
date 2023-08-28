@@ -1,6 +1,7 @@
 .boxImgs{
-    justify-content:space-around ;
+    justify-content: space-evenly ;
     width: 100%;
+    gap: 23px;
     height: 230px;
 }
 .Error{
@@ -13,7 +14,7 @@
 }
 .boxFirst{
     width: 100%;
-    height: 20%;
+    height: 15%;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -22,11 +23,11 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
-    justify-content: center;
+    justify-content: end;
     gap: 20px;
 }
 .nomeBox span{
-    height: 30%;
+    height: 40%;
     margin-left: 2%;
 }
 .nomeBox span input{
@@ -41,21 +42,21 @@
     flex-direction: column;
     width: 50%;
     height: 100%;
-    justify-content: center;
+    justify-content: end;
+    padding-right: 40px;
 }
 .boxSelect span{
     display: flex;
     justify-content: end;
     align-items: center;
     width: 100%;
-    height: 30%;
+    height: 40%;
 }
 .boxSelect span select{
+    margin-left: 2%;
+    padding: 8px;
     border-radius: 15px;
     font-size: 1.2em;
-    padding-left: 15%;
-    margin-right: 13%;
-    margin-left: 2%;
     height: 100%;
     width: 50%;
 }
@@ -65,25 +66,31 @@
 }
 .boxLast{
     width: 100%;
-    height: 25%;
-    margin-left: 1%;
-    align-items: end;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.boxLast span{
-    width: 59%;
-    height: 100%;
-    margin-right: 15%;
+.boxLast #descri{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 70%;
 }
-.boxLast span textarea{
+.boxLast #descri textarea{
     padding: 2%;
-    height: 87%;
+    height: 50%;
     width: 100%;    
     border-radius: 15px;
     resize: none;
 }
-.boxLast input[type='submit']{
+
+.btForm{
+    position: relative;
+    bottom: 2px;
     border-radius: 15px;
     cursor: pointer;
-    height: 100px;
-    width: 180px;
+    height: 40px;
+    width: 20%;
 }

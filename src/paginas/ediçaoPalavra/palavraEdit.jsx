@@ -29,7 +29,10 @@ export default function PalavraEdit() {
 
         const resposta = await api.enviar(palavraEN,palavraPT,categoria,descricao, imagens);
 
-        setRespost(resposta.msg);
+        if(resposta.ok == true){
+            window.location.reload();
+        }
+        setRespost(resposta.msg); 
     };
 
     return (

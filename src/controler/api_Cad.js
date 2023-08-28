@@ -7,7 +7,7 @@ export default {
         formData.append('categoria', categoria);
         formData.append('descricao', descricao);
 
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 0; i <= 3; i++) {
             if (imagens[i]) {
                 formData.append(`image${i}`, imagens[i]);
                 console.log(formData.get(`image${i}`));

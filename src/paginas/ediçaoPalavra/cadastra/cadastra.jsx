@@ -63,13 +63,13 @@ export default function Cadastra(props) {
                 </span>
             </div>
 
-            <span className='boxLast'>
-                <span>
+            <div className='boxLast'>
+                <span id='descri'>
                     <label htmlFor="Description">descricao: </label>
                     <textarea name="descricao" id='Description' cols="30" rows="10"></textarea>
                 </span>
-                <input type="submit" value="Enviar" />
-            </span>
+                    <input className='btForm' type="submit" value="Enviar" />
+            </div>
         </>
     );
 }

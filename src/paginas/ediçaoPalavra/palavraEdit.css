@@ -5,12 +5,16 @@
     justify-content: center;
     align-items: center;
     color: white;
+    background-image: url('../../fundo_Edit.jpg');
 }
 .boxEdit{
     background-color: black;
     height: 95%;
     width: 60%;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .boxEdit .comandH{
     height: 10%;
@@ -27,5 +31,5 @@
 }
 .boxEdit form{
     height: 90%;
-    width: 100%;
+    width: 90%;
 }
