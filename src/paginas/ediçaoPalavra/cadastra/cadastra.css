@@ -1,0 +1,89 @@
+.boxImgs{
+    justify-content:space-around ;
+    width: 100%;
+    height: 230px;
+}
+.Error{
+    color: red;
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    width: 100%;
+    min-height: 5%;
+}
+.boxFirst{
+    width: 100%;
+    height: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.nomeBox{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+.nomeBox span{
+    height: 30%;
+    margin-left: 2%;
+}
+.nomeBox span input{
+    border-radius: 15px;
+    padding-left: 3%;
+    margin-left: 2%;
+    width: 50%;
+    height: 100%;
+}
+.boxSelect{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+.boxSelect span{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+}
+.boxSelect span select{
+    border-radius: 15px;
+    font-size: 1.2em;
+    padding-left: 15%;
+    margin-right: 13%;
+    margin-left: 2%;
+    height: 100%;
+    width: 50%;
+}
+.boxMid{
+    margin-left: 1%;
+    margin-bottom: 3%;
+}
+.boxLast{
+    width: 100%;
+    height: 25%;
+    margin-left: 1%;
+    align-items: end;
+}
+.boxLast span{
+    width: 59%;
+    height: 100%;
+    margin-right: 15%;
+}
+.boxLast span textarea{
+    padding: 2%;
+    height: 87%;
+    width: 100%;    
+    border-radius: 15px;
+    resize: none;
+}
+.boxLast input[type='submit']{
+    border-radius: 15px;
+    cursor: pointer;
+    height: 100px;
+    width: 180px;
+}

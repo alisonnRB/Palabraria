@@ -1,0 +1,24 @@
+
+input[type='file'] {
+    display: none;
+}
+
+.msgEdicao {
+    position: relative;
+    min-height: 1em;
+    color: aliceblue;
+}
+
+#fileBox {
+    border-radius: 100%;
+}
+
+.custom-input {
+    cursor: pointer;
+    height: 230px;
+    width: 180px;
+    background-image: url('../../paginas/ediçaoPalavra/MaisBranco.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #BACFD2;
+}

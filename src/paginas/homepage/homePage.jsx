@@ -5,6 +5,7 @@ import Animation from '../../components/animation/animation';
 import Footer from '../../components/footer/index';
 import Section from '../../components/sections/section';
 
+
 function HomePage() {
   return (
     <div className="HomePage">
