@@ -3,6 +3,11 @@
     padding: 0;
     border: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+:link{
+    text-decoration: none;
+    color: inherit;
 }
 body{
     display: block;

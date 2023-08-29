@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './option1.css';
+import { Link } from 'react-router-dom';
 
 export default function Option1(props) {
   const [classeAplicada, setClasseAplicada] = useState('');
@@ -25,7 +26,7 @@ export default function Option1(props) {
     <div className={`aba ${classeAplicada}`}>
         <span className='fechaOpção1'><p onClick={()=>{adicionarClasse();setTimeout(()=>{removerClasse();props.fecharOption();},600);}}>X</p></span>
         <ol className='listaOpção1'>
-            <li onMouseOver={hovered} onMouseOut={notHovered}><p>option</p></li>
+            <Link to="/comidas"><li onMouseOver={hovered} onMouseOut={notHovered}><p>option</p></li></Link>
             <li><p>option</p></li>
             <li><p>option</p></li>
             <li><p>option</p></li>
