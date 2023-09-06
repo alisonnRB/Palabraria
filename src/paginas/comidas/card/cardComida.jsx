@@ -11,7 +11,7 @@ export default function CardComida(props) {
         try {
             const imagens = JSON.parse(props.info['imagens']);
             if (Array.isArray(imagens)) {
-                setImagem("http://192.168.255.131/palabraria/img/" + imagens[0]);
+                setImagem("http://192.168.255.56/palabraria/img/" + imagens[0]);
             }
         } catch (error) {
         }

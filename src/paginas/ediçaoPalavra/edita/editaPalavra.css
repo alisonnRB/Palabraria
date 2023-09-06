@@ -1,0 +1,133 @@
+#inputText{
+    min-height: 100%;
+    min-width: 97%;
+    padding-left: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+}
+#search{
+    position: relative;
+    left: 93%;
+    top: 80%;
+    height: 25px;
+    width: 25px;
+}
+.buscaP{
+    display: flex;
+    justify-content: end;
+}
+.campBuscaPalavra{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 25%;
+    margin-right: 17%;
+}
+.sugestoesCustom{
+    color: white;
+    position: relative;
+    z-index: 50;
+    background-color: rgba(0, 0, 0, 0.466);
+    min-height: 0px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.sugestoesCustom span{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    font-size: 1.5em;
+}
+.sugestoesCustom span:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.sugestoesCustom span:hover{
+    background-color: black;
+}
+.Error p{
+    position: absolute;
+    left: 18%;
+    top: 5%;
+    font-size: 2em;
+    color: white;
+}
+#deleteAll{
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 100%;
+    background-image: url('../../../DELETE.png');
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+
+    animation: dellOpen 1s ease-in-out ;
+}
+.boxCerteza{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.767);
+    z-index: 100;
+}
+.questBox{
+    display: block;
+    background-color: white;
+    height: 200px;
+    width: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.questBox span:first-child{
+    justify-content: end;
+    align-items: center;
+    padding-right: 30px;
+
+    height: 20%;
+}
+.questBox span:first-child p{
+    cursor: pointer;
+}
+.questBox div{
+    padding: 30px;
+    display: flex;
+    text-align: center;
+    height: 55%;
+    font-size: 1.3em;
+}
+.questBox span:last-child{
+    justify-content: center;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 25%;
+}
+.questBox span:last-child button{
+    cursor: pointer;
+    width: 25%;
+}
+.questBox span:last-child button:hover{
+    box-shadow: 0px 0px 15px 0px rgb(206, 55, 55), inset 0px 0px 10px 0px rgb(206, 55, 55);
+}
+
+@keyframes dellOpen {
+    0%{
+        bottom: -100px;
+    }
+    60%{
+        bottom: 40px;
+    }
+    100%{
+        bottom: 20px;
+    }
+}
