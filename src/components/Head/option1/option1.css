@@ -1,0 +1,91 @@
+
+.boxOpção1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+}
+.boxOpção1-content{
+    display: flex;
+    flex-direction: row;
+}
+.aba{
+    margin: 0;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 300px;
+    left: 0;
+    top: 0;
+    animation: aba 1s;
+}
+.aba.aberto {
+    animation: abaF 1s forwards;
+  }
+.imagem{
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    animation: imagewind 1s;
+}
+.imagem.hovered{
+    background-image: url('../../../melancia.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imagem.aberto{
+    animation: imagewindF 2s forwards ;
+  }
+.fechaOpção1{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+.fechaOpção1 p{
+    cursor: pointer;
+}
+.listaOpção1{
+    margin-top: 3.5em;
+    list-style: none; 
+
+}
+.listaOpção1 li p{
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2em;    
+    margin-bottom: 4rem;
+}
+.listaOpção1 li:hover{
+    background: linear-gradient(to right, white 50%, black 50%);
+    background-size: 200% auto;
+    border-bottom-left-radius:30px;
+    border-top-left-radius:30px;
+    animation: hoverAba 0.5s forwards; 
+}
+
+@keyframes hoverAba {
+    0% { background-position: 0% 0%; border-radius: 0;}
+    100% { background-position: 100% 100%;color: white;}
+}
+@keyframes aba {
+    0%{height: 100vh;width: 125px;border-bottom-right-radius: 60%;border-top-right-radius: 60%;}
+    100%{height: 100vh;width: 300px;border-radius: 0;}
+}
+@keyframes abaF {
+    20%{height: 100vh;}
+    40%{opacity: 1;}
+    90%{width: 90px;}
+    100%{height: 100vh;opacity:0;width: 0;border-radius: 0;}
+    
+}
+@keyframes imagewind {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+@keyframes imagewindF {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}

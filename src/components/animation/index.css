@@ -1,0 +1,60 @@
+
+.fundoAnimação{
+    color: white;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+
+}
+.boxAnimação{
+    height: 0;
+    width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: iniciando 2.5s;
+}
+.logoAnimação{
+    opacity: 0;
+    animation: abre 2s;
+}
+.palavraAnimação{
+    font-size: 16px;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.965s steps(10);
+  }
+.palavraAnimação .letrasAnimação{
+    padding: 4px;
+}
+
+@keyframes typing {
+    0% {width: 0;opacity: 1;}
+    50%{width: 183px;}
+    55%{opacity: 1;}
+    75%{opacity: 0;}
+    85%{opacity: 1;}
+    100%{width: 183px;opacity: 0;}
+  }
+@keyframes abre{
+    0%{opacity: 1;}
+    55%{opacity: 1;}
+    75%{opacity: 0;}
+    85%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes iniciando{
+    0%{height: 100%;width:100vw;background-color: black;visibility: visible;}
+    80%{height: 100%;width:100vw;}
+    100%{height: 0;width:100vw;background-color: black;visibility: hidden;}
+}
