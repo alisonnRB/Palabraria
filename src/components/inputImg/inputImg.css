@@ -1,0 +1,57 @@
+input[type='file'] {
+    display: none;
+}
+
+.msgEdicao {
+    position: relative;
+    min-height: 1em;
+    color: aliceblue;
+}
+#fileBox {
+    border-radius: 100%;
+}
+.custom-input {
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 170px;
+    width: 170px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.445), 0px 0px 20px 0px rgba(0, 0, 0, 0.445);
+    background-image: url('../../camero.png');
+    background-size: 30% 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: 40;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 0.3s ease;
+}
+.custom-input:hover{
+    background-color: rgba(0, 0, 0, 0.103);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.445);
+}
+#delete{
+    position: relative;
+    bottom: 196px;
+    left: 26px;
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+    background-size: contain;
+    cursor: pointer;
+
+    z-index: 30;
+
+    animation: delete 1s ease;
+
+}
+
+@keyframes delete {
+    0% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

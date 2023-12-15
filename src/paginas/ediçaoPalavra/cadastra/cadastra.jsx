@@ -10,6 +10,17 @@ export default function Cadastra(props) {
         try {
             const resposta = await api.enviar();
             if (resposta.ok === true) {
+                const erro = document.getElementsByClassName('Error');
+                if (resposta.msg == 'Inserção realizada com sucesso.') {
+                    for (let i = 0; i < erro.length; i++) {
+                        erro[i].style.color = 'green';
+                    }
+                } else {
+                    for (let i = 0; i < erro.length; i++) {
+                        erro[i].style.color = 'red';
+                    }
+                }
+
                 setCategoria(resposta.categorias);
             }
         } catch (error) {
@@ -29,46 +40,61 @@ export default function Cadastra(props) {
         Busca();
     }, []);
 
+
     return (
         <>
-            <span className='Error'>{props.resposta}</span>
+            <span className='Error'><p>{props.qual}</p>{props.resposta}</span>
+
+            <div className='buscaP'></div>
 
             <span className='boxFirst'>
                 <div className='nomeBox'>
-                    <span>
-                        <label htmlFor="NomeEN">Palabra: </label>
-                        <input type="text" id='NomeEN' name='NomeEN' />
-                    </span>
-                    <span>
-                        <label htmlFor="NomePT">Palavra: </label>
-                        <input type="text" id='NomePT' name='NomePT' />
+
+                    <div id='caixaDePalavras'>
+                        <span>
+                            <label htmlFor="NomeEN">PALABRA: </label>
+                            <input type="text" id='NomeEN' name='NomeEN' />
+                        </span>
+                        <span>
+                            <label htmlFor="NomePT">PALAVRA: </label>
+                            <input type="text" id='NomePT' name='NomePT' />
+                        </span>
+                        <span>
+                            <label htmlFor="selectCat" id='labelSelectCat'>CATEGORIA: </label>
+                            <select id='selectCat' name='categoria'>
+                                {RenderizarItens()}
+                            </select>
+                        </span>
+                    </div>
+
+                    <div id='descri'>
+                        <label htmlFor="Description" id='DescriptionLabel'>DESCRICAO: </label>
+                        <textarea name="descricao" id='Description' cols="30" rows="10"></textarea>
+                    </div>
+
+
+                </div>
+
+                <div id='caixaIMGS'>
+                    <span id='labelDaIMG'>IMAGENS: </span>
+                    <span className='boxImgs'>
+                        <span>
+                            <div><InputImg com={'1'} att={props.att} setAtt={props.setAtt} imagens={props.imagens} setImagens={props.setImagens} /></div>
+                            <div><InputImg com={'2'} att={props.att} setAtt={props.setAtt} imagens={props.imagens} setImagens={props.setImagens} /></div>
+                            <div><InputImg com={'3'} att={props.att} setAtt={props.setAtt} imagens={props.imagens} setImagens={props.setImagens} /></div>
+                        </span>
+                        <span>
+                            <div><InputImg com={'4'} att={props.att} setAtt={props.setAtt} imagens={props.imagens} setImagens={props.setImagens} /></div>
+                            <div><InputImg com={'5'} att={props.att} setAtt={props.setAtt} imagens={props.imagens} setImagens={props.setImagens} /></div>
+                            <div><InputImg com={'6'} att={props.att} setAtt={props.setAtt} imagens={props.imagens} setImagens={props.setImagens} /></div>
+                        </span>
                     </span>
                 </div>
-                <div className='boxSelect'>
-                    <span>
-                        <label htmlFor="selectCat">Categoria:</label>
-                        <select id='selectCat' name='categoria'>
-                            {RenderizarItens()}
-                        </select>
-                    </span>
-                </div>
+
             </span>
 
-            <div className='boxMid'>
-                <span>imagens: </span>
-                <span className='boxImgs'>
-                    <div><InputImg com={'1'} imagens={props.imagens} setImagens={props.setImagens} /></div>
-                    <div><InputImg com={'2'} imagens={props.imagens} setImagens={props.setImagens} /></div>
-                    <div><InputImg com={'3'} imagens={props.imagens} setImagens={props.setImagens} /></div>
-                </span>
-            </div>
-
             <div className='boxLast'>
-                <span id='descri'>
-                    <label htmlFor="Description">descricao: </label>
-                    <textarea name="descricao" id='Description' cols="30" rows="10"></textarea>
-                </span>
-                    <input className='btForm' type="submit" value="Enviar" />
+                <input className='btForm' type="submit" value="ENVIAR" />
             </div>
         </>
     );
